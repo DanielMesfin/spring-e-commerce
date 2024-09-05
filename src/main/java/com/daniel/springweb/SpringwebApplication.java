@@ -8,6 +8,5 @@ public class SpringwebApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringwebApplication.class, args);
-		System.out.println("spring application started");
 	}
 }

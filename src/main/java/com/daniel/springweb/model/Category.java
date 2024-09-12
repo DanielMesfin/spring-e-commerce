@@ -1,10 +1,7 @@
 package com.daniel.springweb.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Category {
@@ -13,6 +10,26 @@ public class Category {
     private Long id;
     private String name;
     private String description;
+    @ManyToOne
+    private User user;
+
+    public Category() {
+    }
+
+    public Category(String name, String description , User userId) {
+        this.name = name;
+        this.description = description;
+        this.user=userId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void serUser(User user) {
+        this.user= user;
+    }
+
 
     public Long getId() {
         return id;

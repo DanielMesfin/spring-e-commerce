@@ -5,6 +5,7 @@ import com.daniel.springweb.Repository.AdminRepository;
 import com.daniel.springweb.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController

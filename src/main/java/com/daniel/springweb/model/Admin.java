@@ -14,6 +14,14 @@ public class Admin {
     private String username;
     private String email;
 
+    public Admin() {
+    }
+
+    public Admin(String username, String email) {
+        this.username = username;
+        this.email = email;
+    }
+
     public Long getId() {
         return id;
     }

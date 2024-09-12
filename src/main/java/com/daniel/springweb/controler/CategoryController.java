@@ -22,7 +22,7 @@ public class CategoryController {
         return categoryRepository.findById(id).orElse(null);
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public Category createCategory(@RequestBody Category category) {
         return categoryRepository.save(category);
     }

@@ -12,6 +12,16 @@ public class Product {
     private String description;
     private Double price;
 
+    public Product() {
+    }
+
+    public Product(String name, String description, Double price, Category category) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+    }
+
     public Category getCategory() {
         return category;
     }
@@ -55,5 +65,4 @@ public class Product {
     @ManyToOne
     private Category category;
 
-    // Getters and Setters
 }

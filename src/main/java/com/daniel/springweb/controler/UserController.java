@@ -11,7 +11,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping
+    @GetMapping("all")
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
@@ -21,7 +21,7 @@ public class UserController {
         return userRepository.findById(id).orElse(null);
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
@@ -39,7 +39,7 @@ public class UserController {
         return null;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
     }
